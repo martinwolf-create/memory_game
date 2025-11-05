@@ -178,8 +178,8 @@ class _AnimatedLogo extends StatelessWidget {
           ],
           border: Border.all(
             color: isBack
-                ? Colors.white.withOpacity(0.25)
-                : AppColors.secondary.withOpacity(0.25),
+                ? Colors.white.withValues(alpha: 0.25)
+                : AppColors.secondary.withValues(alpha: 0.25),
             width: 2,
           ),
         ),
@@ -222,8 +222,8 @@ class _CardsParticlePainter extends CustomPainter {
       );
 
       paint.color = Color.lerp(
-        AppColors.accentBlue.withOpacity(0.25),
-        AppColors.accentYellow.withOpacity(0.25),
+        AppColors.accentBlue.withValues(alpha: 0.25),
+        AppColors.accentYellow.withValues(alpha: 0.25),
         (i % 2 == 0) ? (0.35 + 0.4 * (p)) : (0.25 + 0.5 * (1 - p)),
       )!;
       canvas.drawRRect(rect, paint);
@@ -232,7 +232,7 @@ class _CardsParticlePainter extends CustomPainter {
       final border = Paint()
         ..style = PaintingStyle.stroke
         ..strokeWidth = 1.2
-        ..color = Colors.white.withOpacity(0.35);
+        ..color = Colors.white.withValues(alpha: 0.35);
       canvas.drawRRect(rect, border);
     }
   }

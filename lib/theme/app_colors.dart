@@ -8,6 +8,8 @@ class AppColors {
   static const Color secondary = Color(0xFFFFB74D); // Orange
   static const Color success = Color(0xFF4AD480); // Giftgrün (aus NOTEkey)
   static const Color error = Color(0xFFE53935); // Rot
+  static const Color dunkelbraun = Color(0xFF8D6E63); // Dunkelbraun
+  static const Color goldbraun = Color(0xFFD6B65B); // Goldbraun
 
   // Hintergrund & Oberflächen
   static const Color background = Color(0xFFFFF9F3); // Warmes Hellbeige
@@ -31,4 +33,6 @@ class AppColors {
     Color(0xFFFFB74D), // orange
     Color(0xFFFFF176), // gelb
   ];
+
+  static var giftgruen;
 }

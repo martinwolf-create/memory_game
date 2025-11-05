@@ -1,50 +1,53 @@
-name: notekey_app
-description: NOTEkey – Musiklern-App
+name: memory_game
+description: Ein interaktives Memory-Spiel mit Sounds, Animation und Firebase-Anbindung.
 publish_to: "none"
 version: 1.0.0+1
 
 environment:
-  sdk: ">=3.3.0 <4.0.0"
+  sdk: ">=3.4.0 <4.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
 
-  # Firebase
-  firebase_core: ^3.4.0
+  # 🔥 Firebase Core + Auth + Firestore
+  firebase_core: ^3.6.0
   firebase_auth: ^5.3.1
-  cloud_firestore: ^5.4.1
-  firebase_storage: ^12.3.0
+  cloud_firestore: ^5.4.4
 
-  # Medien & Pfade
-  image_picker: ^1.1.2
-  path_provider: ^2.1.4
-  path: ^1.9.0
+  # 💬 State Management (leichtgewichtig)
+  provider: ^6.1.2
 
-  # Sonstiges
-  cupertino_icons: ^1.0.8
+  # 🎵 Audio / Sound
+  audioplayers: ^6.1.0
+
+  # 🎨 Animationen & Effekte
+  flutter_animate: ^4.5.0
+  lottie: ^3.1.2
+
+  # 🖼️ Bilder / Assets
+  cached_network_image: ^3.3.1
+
+  # 🔗 URL Launcher (z. B. für NOTEkey.de)
   url_launcher: ^6.3.0
-  sqflite: ^2.3.3
-  webview_flutter: ^4.4.2
-  uuid: ^4.2.2
-  provider: ^6.1.5+1
-  intl: ^0.20.2
+
+  # 📱 Layout / Responsives Design
+  flutter_screenutil: ^5.9.3
+
+  # ⚙️ System Utilities
+  shared_preferences: ^2.3.2
+  intl: ^0.19.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^3.0.2
-  flutter_launcher_icons: ^0.13.1
+  flutter_lints: ^4.0.0
 
 flutter:
   uses-material-design: true
 
   assets:
     - assets/images/
+    - assets/sounds/
     - assets/icons/
-    - assets/
-
-flutter_icons:
-  android: true
-  ios: true
-  image_path: "assets/notekey1024.png"
+    - assets/background/
