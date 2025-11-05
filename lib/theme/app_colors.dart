@@ -1,29 +1,30 @@
 import 'package:flutter/material.dart';
 
-/// Zentrale Farbpalette – kindgerecht, warm & kontrastreich.
-/// Tipp: Wenn du später CI-Farben festlegst, passe NUR hier an.
+/// Zentrale Farbpalette – freundlich & kontrastreich für Kinder.
 class AppColors {
-  // Grundfarben
+  // Brand
   static const Color primary = Color(0xFF4A90E2); // Blau
   static const Color secondary = Color(0xFFFFB74D); // Orange
-  static const Color success = Color(0xFF4AD480); // Giftgrün (aus NOTEkey)
-  static const Color error = Color(0xFFE53935); // Rot
 
-  // Hintergrund & Oberflächen
-  static const Color background = Color(0xFFFFF9F3); // Warmes Hellbeige
+  // Status
+  static const Color success = Color(0xFF4AD480);
+  static const Color error = Color(0xFFE53935);
+
+  // Surfaces
+  static const Color background = Color(0xFFFFF9F3);
   static const Color surface = Colors.white;
 
-  // Textfarben
-  static const Color textPrimary = Color(
-    0xFF30241B,
-  ); // Dunkelbraun (Kontinuität)
+  // Text
+  static const Color textPrimary = Color(0xFF30241B);
   static const Color textSecondary = Color(0xFF5B4A3E);
 
-  // Deko/Fokus
+  // Deko
   static const Color accentBlue = Color(0xFF1976D2);
   static const Color accentYellow = Color(0xFFFFD54F);
+  static const Color accentPink = Color(0xFFF06292);
+  static const Color accentMint = Color(0xFF80CBC4);
 
-  // Verlauf (Animation-Screen)
+  // Gradient-Paletten für Splash (blendet zwischen A und B)
   static const List<Color> gradientA = [
     Color(0xFF4A90E2), // blau
     Color(0xFF81D4FA), // hellblau
