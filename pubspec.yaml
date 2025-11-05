@@ -10,31 +10,31 @@ dependencies:
   flutter:
     sdk: flutter
 
-  # 🔥 Firebase Core + Auth + Firestore
+  # 🔥 Firebase
   firebase_core: ^3.6.0
   firebase_auth: ^5.3.1
   cloud_firestore: ^5.4.4
 
-  # 💬 State Management (leichtgewichtig)
+  # 💬 State
   provider: ^6.1.2
 
-  # 🎵 Audio / Sound
+  # 🎵 Audio
   audioplayers: ^6.1.0
 
-  # 🎨 Animationen & Effekte
+  # 🎨 Animationen
   flutter_animate: ^4.5.0
   lottie: ^3.1.2
 
-  # 🖼️ Bilder / Assets
+  # 🖼️ Bilder / Caching (optional)
   cached_network_image: ^3.3.1
 
-  # 🔗 URL Launcher (z. B. für NOTEkey.de)
+  # 🔗 Links
   url_launcher: ^6.3.0
 
-  # 📱 Layout / Responsives Design
+  # 📱 Responsive (optional)
   flutter_screenutil: ^5.9.3
 
-  # ⚙️ System Utilities
+  # ⚙️ Utilities
   shared_preferences: ^2.3.2
   intl: ^0.19.0
 
@@ -47,7 +47,12 @@ flutter:
   uses-material-design: true
 
   assets:
+    # Bilder/Icons/Hintergründe (wie bei dir)
     - assets/images/
-    - assets/sounds/
     - assets/icons/
     - assets/background/
+
+    # Sounds: ein Eintrag reicht rekursiv für alle Kategorien
+    - assets/sounds/
+    # Effekte: Erfolg/Fehler/Click etc.
+    - assets/sfx/

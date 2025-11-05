@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:memory_game/screens/game/game_screen.dart' show GameScreen;
 import 'package:memory_game/theme/app_colors.dart';
 import 'package:memory_game/widgets/animated_bg.dart';
 
@@ -172,11 +173,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 Center(
                   child: ElevatedButton.icon(
                     onPressed: () {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(
-                          backgroundColor: AppColors.dunkelbraun,
-                          content: Text(
-                            'Starte Spiel: $category, Schwierigkeit: $difficulty',
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (_) => GameScreen(
+                            category: category,
+                            pairs: difficulty, // 4..12/24 = Paare
                           ),
                         ),
                       );
