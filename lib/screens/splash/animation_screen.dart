@@ -59,20 +59,17 @@ class _AnimationScreenState extends State<AnimationScreen>
   }
 
   void _goNext() {
-    Navigator.of(
-      context,
-    ).pushReplacement(MaterialPageRoute(builder: (_) => const HomeScreen()));
+    Navigator.of(context).pushReplacement(
+      MaterialPageRoute(builder: (_) => const HomeScreen()),
+    );
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: AnimatedBuilder(
-        animation: Listenable.merge([
-          _bgController,
-          _logoFlipController,
-          _particlesController,
-        ]),
+        animation: Listenable.merge(
+            [_bgController, _logoFlipController, _particlesController]),
         builder: (context, _) {
           return Stack(
             children: [
@@ -177,7 +174,7 @@ class _AnimatedLogo extends StatelessWidget {
               color: Colors.black12,
               blurRadius: 16,
               offset: Offset(0, 8),
-            ),
+            )
           ],
           border: Border.all(
             color: isBack
@@ -189,8 +186,8 @@ class _AnimatedLogo extends StatelessWidget {
         child: Text(
           isBack ? 'Sound Memory' : 'Memory Game',
           style: Theme.of(context).textTheme.headlineLarge!.copyWith(
-            color: isBack ? Colors.white : AppColors.textPrimary,
-          ),
+                color: isBack ? Colors.white : AppColors.textPrimary,
+              ),
         ),
       ),
     );

@@ -18,10 +18,8 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Text(
-                'Willkommen 👋',
-                style: Theme.of(context).textTheme.headlineMedium,
-              ),
+              Text('Willkommen 👋',
+                  style: Theme.of(context).textTheme.headlineMedium),
               const SizedBox(height: 12),
               Text(
                 'Hier kommt später die Hauptnavigation: '
